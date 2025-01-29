@@ -55,6 +55,8 @@ void MainWindow::on_actionPrivate_triggered()
 void MainWindow::on_actionPublic_triggered()
 {
     ui->stackedWidget->setCurrentIndex(0);
+    auto pub_w = qobject_cast<Publick_chat*>(ui->stackedWidget->widget(0));
+    pub_w->preload_data();
 }
 
 
