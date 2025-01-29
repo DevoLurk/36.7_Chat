@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>750</width>
+    <height>900</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout" stretch="1">
+    <item>
+     <widget class="QStackedWidget" name="stackedWidget">
+      <widget class="Publick_chat" name="page_private"/>
+      <widget class="Private_chat" name="page_public"/>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>750</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuMenu">
+    <property name="title">
+     <string>Menu</string>
+    </property>
+    <addaction name="actionPrivate"/>
+    <addaction name="actionPublic"/>
+   </widget>
+   <addaction name="menuMenu"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionPrivate">
+   <property name="text">
+    <string>Private</string>
+   </property>
+  </action>
+  <action name="actionPublic">
+   <property name="text">
+    <string>Public</string>
+   </property>
+  </action>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>Publick_chat</class>
+   <extends>QWidget</extends>
+   <header location="global">publick_chat.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>Private_chat</class>
+   <extends>QWidget</extends>
+   <header location="global">private_chat.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
